@@ -5,7 +5,7 @@
 xOr(X,Y) -> 
     if 
     X+Y-2*X*Y = 0 -> false;
-    X+Y-2*X*Y = 1 -> true.
+    X+Y-2*X*Y = 1 -> true;
     end.
     
 
