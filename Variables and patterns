@@ -1,0 +1,16 @@
+-module(pattern_matching).
+-export(xOr/2, maxThree/3, howManyEq/3]).
+
+%based on analytical representation of xOR gate (https://en.wikipedia.org/wiki/XOR_gate).
+xOr(X,Y) -> X+Y-2*X*Y.
+
+%maxThree
+maxThree(X, Y, Z) ->
+    max(max(X, Y), Z).
+    
+ %howManyEquals
+howManyEq(X,X,X) -> 3;
+howManyEq(X,X,_) -> 2;
+howManyEq(X,_,X) -> 2;
+howManyEq(_,X,X) -> 2;
+howManyEq(_,_,_) -> 0. 
