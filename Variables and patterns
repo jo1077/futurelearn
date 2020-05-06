@@ -1,8 +1,13 @@
 -module(pattern_matching).
 -export(xOr/2, maxThree/3, howManyEq/3]).
 
-%based on analytical representation of xOR gate (https://en.wikipedia.org/wiki/XOR_gate).
-xOr(X,Y) -> X+Y-2*X*Y.
+%based on analytical representation of xOR gate (https://en.wikipedia.org/wiki/XOR_gate) with X/Y 0 or 1.
+xOr(X,Y) -> 
+    if 
+    X+Y-2*X*Y = 0 -> false;
+    X+Y-2*X*Y = 1 -> true.
+    end.
+    
 
 %maxThree
 maxThree(X, Y, Z) ->
