@@ -1,0 +1,9 @@
+-module(fib1).
+-export([fib/1]).
+
+fib(X) -> fib_tr(X, 0, 1).
+
+fib_tr(0, A, _) -> A;
+fib_tr(C, A, B) when C > 0 ->
+  fib_tr(C-1, B, A+B).
+
