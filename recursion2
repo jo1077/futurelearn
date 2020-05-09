@@ -1,0 +1,10 @@
+-module(recursion2).
+-export([fib1/1],[pieces/1]).
+
+fib1(0) ->0;
+fib1(1) ->1;
+fib1(X)  when X>1 -> fib (X-2) + fib(X-1).
+
+pices(0) -> 1;
+pieces(1) -> 2;
+pieces(X) when X>1 ->X+pieces(X-1).
