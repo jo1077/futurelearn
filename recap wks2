@@ -1,0 +1,20 @@
+
+-module(remove).
+-export([remove/1, noob/2, palindrome/1]).
+
+
+% remove duplicate list members
+remove([]) ->[];
+remove([H|T])  -> [H| [X||X  <-remove(T), X=/=H]].
+
+
+% noob list
+noob(_,0)  ->[];
+
+noob([H|T], 1) -> [H];
+
+noob([H|T], N) when N >1 ->[H|noob(T, N-1)].
+
+
+%list palindrome
+palindrome(X) -> X=:=lists:reverse(X).
