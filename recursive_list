@@ -1,0 +1,9 @@
+-module(recursive_list).
+-export([double/1, even_list/1]).
+
+double([]) ->[];
+double([H|T]) -> [H*2 | double (T)].
+
+even_list([]) ->[];
+even_list([H|T]) when H rem 2==0 -> [H|even_list(T)];
+even_list([_|T]) -> even_list(T).
